@@ -9,6 +9,8 @@ from flasgger import Swagger
 from flasgger.utils import swag_from
 
 app = Flask(__name__)
+app_host = environ.get('HBNB_API_HOST', '0.0.0.0')
+app_port = environ.get('HBNB_API_PORT', '5000')
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 app.register_blueprint(app_views)
 cors = CORS(app, resources={r"/*": {"origins": "0.0.0.0"}})
