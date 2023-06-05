@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  /** display list of checked checkbes **/ 
+  /** display list of checked checkbes **/
   let lsAmenity = [];
   $('input[type=checkbox]').change(function () {
     const name = $(this).attr('data-name');
@@ -12,7 +12,7 @@ $(document).ready(function () {
   });
   $(function () {
     const url = 'http://0.0.0.0:5001/api/v1/status/';
-    $.get( url, function (data, status) {
+    $.get(url, function (data, status) {
       if (data.status === 'OK' && status === 'success') {
         $('#api_status').addClass('available');
       } else {
