@@ -12,12 +12,12 @@ $(document).ready(function () {
   });
   /** add availbel to api_staus (check api status) */
   $(function () {
-    const url = 'http://0.0.0.0:5001/api/v1/status/';
+    const url = 'http://' + window.location.hostname + ':5001/api/v1/status/';
     $.get(url, function (data, status) {
-      if (data.status === 'OK' && status === 'success') {
-        $('#api_status').addClass('available');
+      if (data.status === 'OK') {
+        $('div#api_status').addClass('available');
       } else {
-        $('#api_status').removeClass('available');
+        $('div#api_status').removeClass('available');
       }
     });
   });

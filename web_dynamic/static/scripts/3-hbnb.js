@@ -10,8 +10,8 @@ $(document).ready(function () {
       }
       $('.amenities h4').text(lsAmenity.join(', '));
     });
-});
-  $(function () {
+    /** add availbel to api_staus (check api status) */
+    $(function () {
     const url = 'http://0.0.0.0:5001/api/v1/status/';
     $.get( url, function (data, status) {
       if (data.status === 'OK' && status === 'success') {
@@ -24,4 +24,4 @@ $(document).ready(function () {
   $(function () {
     const url_serach = 'http://0.0.0.0:5001/api/v1/places_search/';
   })
-  
+});

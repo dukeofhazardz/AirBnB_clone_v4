@@ -14,8 +14,11 @@ header .logo {
     background-color: #CCCCCC;
     margin-right: 30px;
     float: right;
-    justify-content: center;
+    position: relative;
+    height: 40px;
+    border-radius: 100%;
+    bottom: 80%;
 }
-header .availabel{
+#api_status.available{
     background-color: #ff545f;
 }
