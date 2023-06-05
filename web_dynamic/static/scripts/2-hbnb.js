@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  /** display list of checked checkbes **/
+  /** display list of checked amenties **/
   let lsAmenity = [];
   $('input[type=checkbox]').change(function () {
     const name = $(this).attr('data-name');
@@ -10,6 +10,7 @@ $(document).ready(function () {
     }
     $('.amenities h4').text(lsAmenity.join(', '));
   });
+  /** add availbel to api_staus (check api status) */
   $(function () {
     const url = 'http://0.0.0.0:5001/api/v1/status/';
     $.get(url, function (data, status) {
